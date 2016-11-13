@@ -32,3 +32,5 @@ declare module 'waterline' {
     var waterline: Waterline.Waterline;
     export = waterline;
 }
+export = Waterline;
+export as namespace Waterline;
