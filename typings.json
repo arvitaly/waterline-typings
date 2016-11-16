@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "bluebird": "registry:dt/bluebird#3.0.0+20161007114152"
+  }
+}
