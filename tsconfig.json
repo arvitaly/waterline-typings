@@ -4,7 +4,13 @@
         "target": "es6",
         "noImplicitAny": true,
         "strictNullChecks": true,
-        "types": [],
+        "typeRoots": [
+            "typings/globals"
+        ],
+        "types": [
+            "node",
+            "bluebird"
+        ],
         "noEmit": true,
         "forceConsistentCasingInFileNames": true
     },
