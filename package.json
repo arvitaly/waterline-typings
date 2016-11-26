@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/arvitaly/waterline-typings/issues"
   },
-  "homepage": "https://github.com/arvitaly/waterline-typings#readme"
+  "homepage": "https://github.com/arvitaly/waterline-typings#readme",
+  "devDependencies": {
+    "tslint": "^4.0.2",
+    "typescript": "^2.0.10"
+  }
 }
