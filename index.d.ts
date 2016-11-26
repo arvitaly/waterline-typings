@@ -13,15 +13,9 @@ declare namespace Waterline {
         collections: any;
     }
     interface Waterline {
-        loadCollection(collection: CollectionClass);
+        loadCollection(collection: CollectionClass): void;
         initialize: (config: Config, cb: (err: Error, ontology: Ontology) => any) => any;
         collections: any;
-    }
-    interface WaterlineStatic {
-        Collection: {
-            extend: (params: CollectionDefinitions) => CollectionClass;
-        }
-        new (): Waterline;
     }
     interface CollectionClass {
         (): Collection
@@ -68,61 +62,28 @@ declare namespace Waterline {
         create: (model: any) => Promise<any>;
         update: (conditions: any, model: any) => Promise<Array<any>>;
         find: (model: any) => Promise<Array<any>>;
-        connections
+        connections: any; // TODO
         waterline: Waterline;
-        adapter
-        defaults
-        hasSchema
-        migrate
-        adapterDictionary
-        pkFormat
-        syncable
-        registerConnection
-        teardown
-        define
-        findOne
-        findOneById
-        findOneByIdIn
-        findOneByIdLike
-        findById
-        findByIdIn
-        findByIdLike
-        countById
-        countByIdIn
-        countByIdLike
-        idStartsWith
-        idContains
-        idEndsWith
-        findOneByCreatedAt
-        findOneByCreatedAtIn
-        findOneByCreatedAtLike
-        findByCreatedAt
-        findByCreatedAtIn
-        findByCreatedAtLike
-        countByCreatedAt
-        countByCreatedAtIn
-        countByCreatedAtLike
-        createdAtStartsWith
-        createdAtContains
-        createdAtEndsWith
-        findOneByUpdatedAt
-        findOneByUpdatedAtIn
-        findOneByUpdatedAtLike
-        findByUpdatedAt
-        findByUpdatedAtIn
-        findByUpdatedAtLike
-        countByUpdatedAt
-        countByUpdatedAtIn
-        countByUpdatedAtLike
-        updatedAtStartsWith
-        updatedAtContains
-        updatedAtEndsWith
-        definition
-        meta
+        adapter: any; // TODO
+        defaults: any; // TODO
+        hasSchema: any; // TODO
+        migrate: any; // TODO
+        adapterDictionary: any; // TODO
+        pkFormat: any; // TODO
+        syncable: any; // TODO
+        registerConnection: any; // TODO
+        teardown: any; // TODO
+        define: any; // TODO
+        definition: any; // TODO
+        meta: any; // TODO
     }
 
 }
-declare module 'waterline' {
-    var waterline: Waterline.WaterlineStatic;
-    export = waterline;
-} 
+declare interface WaterlineStatic {
+    Collection: {
+        extend: (params: Waterline.CollectionDefinitions) => Waterline.CollectionClass;
+    }
+    new (): Waterline.Waterline;
+}
+declare var Waterline: WaterlineStatic;
+export = Waterline;
