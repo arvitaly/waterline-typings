@@ -1,7 +1,5 @@
 declare namespace Waterline {
-    interface Adapter {
-
-    }
+    type Adapter = Object;
     type Connection = {
         adapter: string;
     }
@@ -77,7 +75,7 @@ declare namespace Waterline {
         definition: any; // TODO
         meta: any; // TODO
     }
-
+    export type Model = Collection;
 }
 declare interface WaterlineStatic {
     Collection: {
